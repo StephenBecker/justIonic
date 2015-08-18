@@ -1,0 +1,25 @@
+<ion-view view-title="File">
+  <ion-content>
+      <ion-list>
+          <ion-list>
+              <ion-item >
+                  <button ng-click='saveFile()'>save</button>
+                  <button ng-click='editFile()'>edit</button>
+              </ion-item>
+          
+              <div ng-model="file">
+                  <div>User: {{file.name}}</div>
+                  <div>
+                      registration Number:  {{file.regNumber}}
+                  </div> 
+                  <div> phone: {{file.thisPhone}}</div> 
+                  <h4>Affiliations</h4>
+                 <div ng-repeat="(key,val) in file.affiliations">
+                     <h5>Type : {{key}}</h5><div ng-repeat="(key,val) in val">
+                     {{key}}: {{val}}
+                     </div> 
+              </div>
+
+      </ion-list>
+  </ion-content>
+</ion-view>
